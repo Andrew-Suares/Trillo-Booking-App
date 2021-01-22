@@ -1,0 +1,147 @@
+.container {
+	max-width: 120rem;
+	margin: 8rem auto;
+	background-color: var(--color-grey-light-1);
+	-webkit-box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+	box-shadow: var(--shadow-dark);
+	min-height: 50rem;
+
+	@media only screen and (max-width: $bp-largest) {
+		margin: 0;
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+.header {
+	font-size: 1.4rem;
+	min-height: 7rem;
+	background-color: #fff;
+	border-bottom: 1px solid var(--color-grey-light-2);
+
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+
+	@media only screen and (max-width: $bp-smallest) {
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		min-height: 11rem;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
+	}
+}
+
+.content {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	@media only screen and (max-width: $bp-medium) {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+}
+
+.sidebar {
+	background-color: var(--color-grey-dark-1);
+	// ! no shrink and no grow and 18% width for
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 18%;
+	        flex: 0 0 18%;
+
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.hotel-view {
+	background-color: #fff;
+	// !we want it to grow the rest of the entire width of container
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+.detail {
+	font-size: 1.4rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 4.5rem;
+	background-color: var(--color-grey-1);
+	border-bottom: var(--line);
+
+	@media only screen and (max-width: $bp-medium) {
+		padding: 3rem;
+	}
+	@media only screen and (max-width: $bp-small) {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+	@media only screen and (max-width: $bp-smallest) {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+}
+
+.description {
+	background-color: #fff;
+	-webkit-box-shadow: var(--shadow-light);
+	        box-shadow: var(--shadow-light);
+	padding: 3rem;
+	// ! takes up 60% of the container and does not grow
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 60%;
+	        flex: 0 0 60%;
+	margin-right: 4.5rem;
+
+	@media only screen and (max-width: $bp-medium) {
+		padding: 2rem;
+		margin-right: 3rem;
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		margin-right: 0;
+		margin-bottom: 3rem;
+	}
+}
+
+.user-reviews {
+	// ! means take up the rest the space.
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
